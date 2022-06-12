@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "@suarsan/ngx-flipboardtext": {
+      "projectType": "library",
+      "root": "projects/suarsan/ngx-flipboardtext",
+      "sourceRoot": "projects/suarsan/ngx-flipboardtext/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/suarsan/ngx-flipboardtext/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/suarsan/ngx-flipboardtext/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/suarsan/ngx-flipboardtext/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/suarsan/ngx-flipboardtext/src/test.ts",
+            "tsConfig": "projects/suarsan/ngx-flipboardtext/tsconfig.spec.json",
+            "karmaConfig": "projects/suarsan/ngx-flipboardtext/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-flipboardtext"
