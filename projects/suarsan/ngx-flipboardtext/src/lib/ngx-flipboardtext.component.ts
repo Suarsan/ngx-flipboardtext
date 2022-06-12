@@ -8,19 +8,18 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
 export class NgxFlipboardtextComponent implements OnInit {
 
   @Input() keys!: Array<String>;
-  @Input() fontSize!: String;
-  @Input() duration!: number;
-  @Input() breakRatio!: number;
+  @Input() cycleDuration!: number;
+  @Input() fontSize: String;
+  @Input() breakRatio: number;
+  @Input() backgroundColor: string;
+  @Input() textColor: string;
 
 
-  @HostBinding('style.--font-size')
-  public _fontSize: string;
-
-  constructor() {
-    // this.keys = [];
-    this.fontSize = this._fontSize = '2rem';
-    // this.duration = 7000;
-    // this.breakRatio = 0.8;
+  constructor() {;
+    this.fontSize = '2rem';
+    this.breakRatio = 0.75;
+    this.backgroundColor = '#2cc4d2';
+    this.textColor = '#ffffff';
   }
 
   ngOnInit(): void {

@@ -42,7 +42,7 @@ export class NgxFlipboardtextDirective implements OnInit {
     }
     frames.push(style({ marginTop: `calc(-3 * ${o.keys.length} * ${o.fontSize})`, offset: 1 }));
     console.log(`calc(-3 * ${o.keys.length} * ${o.fontSize})`, 1);
-    animationMetadata.push(animate(`${o.duration}ms`, keyframes(frames)));
+    animationMetadata.push(animate(`${o.cycleDuration}ms`, keyframes(frames)));
     return animationMetadata;
   }
 

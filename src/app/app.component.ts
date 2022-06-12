@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   keys = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
-  fontSize = '2rem';
-  duration = 10000;
-  breakRatio = 0.85;
+  cycleDuration = 15000;
 }
