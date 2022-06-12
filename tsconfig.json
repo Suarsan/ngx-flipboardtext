@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@suarsan/ngx-flipboardtext": [
+        "dist/suarsan/ngx-flipboardtext/suarsan-ngx-flipboardtext",
+        "dist/suarsan/ngx-flipboardtext"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

@@ -1,0 +1,9 @@
+<div class="content">
+    <div class="visible">
+    <ul *ngIf="keys && (keys.length > 0)" ngxFlipAnimationDirective>
+        <li *ngFor="let key of keys">
+            <div>{{key}}</div>
+        </li>
+    </ul>
+    </div>
+</div>
