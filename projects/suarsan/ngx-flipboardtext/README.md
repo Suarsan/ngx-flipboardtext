@@ -1,24 +1,88 @@
 # NgxFlipboardtext
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+[![npm version](https://badge.fury.io/js/@suarsan%2Fngx-flipboardtext.svg)](https://badge.fury.io/js/@suarsan%2Fngx-flipboardtext)
 
-## Code scaffolding
+A full featured and customizable flipboard text component for Angular.
 
-Run `ng generate component component-name --project ngx-flipboardtext` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-flipboardtext`.
-> Note: Don't forget to add `--project ngx-flipboardtext` or else it will be added to the default project in your `angular.json` file. 
+![alt text](https://github.com/Suarsan/ngx-flipboardtext/raw/master/projects/suarsan/ngx-flipboardtext/demo.png)
 
-## Build
 
-Run `ng build ngx-flipboardtext` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Demo
 
-## Publishing
+Try full demo  at **[ngx-flipboardtext](www.javiersuarezsanchez.com/projects/ngx-flipboardtext)**
 
-After building your library with `ng build ngx-flipboardtext`, go to the dist folder `cd dist/ngx-flipboardtext` and run `npm publish`.
+## Usage
 
-## Running unit tests
+#### Installation
 
-Run `ng test ngx-flipboardtext` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install via npm
 
-## Further help
+    npm install @suarsan/flipboardtext
+    
+#### Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Import ``NgxFlipboardtextModule`` in your app.module.ts
+
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent } from './app.component';
+    
+    import { NgxFlipboardtextModule } from '@suarsan/ngx-flipboardtext';
+
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        NgxFlipboardtextModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+
+## Documentation
+
+#### Inputs
+
+| Input | Type | Default | Required | Description |
+| ----- | ---- | ------  | -------- | ----------- |
+| keys | `Array<string>` | - | true | Array of key string to show |
+| cycleDuration | `number` | 15000 | false | Animations duration in ms |
+| fontSize | `string` | '2rem' | false | Font size |
+| breakRatio | `number` | 0.75 | false | Time relation between show text and flip text |
+| backgroundColor | `string` | '#2cc4d2' | false | Background color |
+| textColor | `string` | '#ffffff' | false | Text color |
+
+#### Example
+
+    <ngx-flipboardtext
+        [keys]="['hello', 'I am', 'John DOE']"
+        [cycleDuration]="5000"
+        [fontSize]="'5rem'"
+        [breakRatio]="0.85"
+        [backgroundColor]="'#FF0000'" 
+        [textColor]="'#00FF00'"
+    ></ngx-flipboardtext>
+
+
+---
+
+## Creator
+
+**[Javier Suárez Sánchez](https://javiersuarezsanchez.com)**
+
+
+
+
+---
+
+### Keywords
+
+`angular` `ngx` `javascript` `flipboardtext` `flip` `board` `text` `flipboard` `animation`
+
+---
+
+
+
