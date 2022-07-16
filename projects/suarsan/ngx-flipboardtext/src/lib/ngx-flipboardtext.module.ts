@@ -20,3 +20,4 @@ import { NgxFlipboardtextDirective } from './ngx-flipboardtext.directive';
   ]
 })
 export class NgxFlipboardtextModule { }
+

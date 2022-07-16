@@ -1,11 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Base, returnProvider } from './base.class';
 
 @Component({
   selector: 'ngx-flipboardtext',
   templateUrl: 'ngx-flipboardtext.component.html',
-  styleUrls: ['ngx-flipboardtext.component.scss']
+  styleUrls: ['ngx-flipboardtext.component.scss'],
+  providers: [returnProvider(NgxFlipboardtextComponent)],
 })
-export class NgxFlipboardtextComponent {
+export class NgxFlipboardtextComponent implements Base {
 
   @Input() keys!: Array<String>;
   @Input() cycleDuration: number;

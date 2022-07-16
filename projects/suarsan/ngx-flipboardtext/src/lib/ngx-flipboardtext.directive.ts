@@ -1,6 +1,7 @@
 import { animate, AnimationBuilder, AnimationFactory, AnimationMetadata, AnimationPlayer, AnimationStyleMetadata, keyframes, style } from '@angular/animations';
 import { OnInit, Directive, ElementRef } from '@angular/core';
-import { NgxFlipboardtextComponent } from './ngx-flipboardtext.component';
+import { Base } from './base.class';
+import { NgxFlipboardtextConfig } from './ngx-flipboardtext-config.interface';
 
 @Directive({
   selector: '[ngxFlipboardtextDirective]'
@@ -10,9 +11,9 @@ export class NgxFlipboardtextDirective implements OnInit {
   private player: AnimationPlayer | null = null;
   private factory: AnimationFactory | null = null;
 
-  constructor(private eRef: ElementRef, private ngxFlipboardtext: NgxFlipboardtextComponent, private animationBuilder?: AnimationBuilder,) { 
+  constructor(private eRef: ElementRef, private host: Base, private animationBuilder?: AnimationBuilder) { 
     if (this.animationBuilder) {
-      this.factory = this.animationBuilder.build(this.getAnimation(this.ngxFlipboardtext));
+      this.factory = this.animationBuilder.build(this.getAnimation(this.host as NgxFlipboardtextConfig));
     }
     if (this.factory) {
       this.player = this.factory.create(this.eRef.nativeElement);
@@ -30,7 +31,7 @@ export class NgxFlipboardtextDirective implements OnInit {
     }
   }
 
-  private getAnimation(o: NgxFlipboardtextComponent): AnimationMetadata[] {
+  private getAnimation(o: NgxFlipboardtextConfig): AnimationMetadata[] {
     const animationMetadata: AnimationMetadata[] = [];
     const frames: AnimationStyleMetadata[] = [];
     frames.push(style({ marginTop: `calc(0 * ${o.fontSize})`, offset: 0 }));
