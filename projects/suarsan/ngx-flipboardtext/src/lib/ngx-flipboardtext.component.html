@@ -1,8 +1,14 @@
 <div class="content">
-    <div class="visible">
-    <ul *ngIf="keys && (keys.length > 0)" ngxFlipAnimationDirective>
+    <div class="visible" [ngStyle]="{'height': 'calc(3*' + fontSize + ')'}">
+    <ul *ngIf="keys && (keys.length > 0)" ngxFlipboardtextDirective>
         <li *ngFor="let key of keys">
-            <div>{{key}}</div>
+            <div [ngStyle]="{ 'height': 'calc(2 * ' + fontSize + ')',
+                              'margin': ' calc(' + fontSize  + '/ 2) 0',
+                              'font-size': fontSize,
+                              'background-color': backgroundColor,
+                              'color': textColor }">
+                {{key}}
+            </div>
         </li>
     </ul>
     </div>

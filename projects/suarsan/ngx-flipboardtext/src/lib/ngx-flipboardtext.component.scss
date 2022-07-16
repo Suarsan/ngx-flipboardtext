@@ -1,5 +1,3 @@
-$primary-color: rgb(44, 196, 210);
-
 :host {
     position: relative;
     display: flex;
@@ -12,12 +10,11 @@ $primary-color: rgb(44, 196, 210);
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate(-50%,);
+        transform: translate(-50%, -50%);
         > div.visible {
             display: flex;
             flex-direction: row;
             overflow: hidden;
-            height: calc(3 * var(--font-size));
             > ul {
                 display: flex;
                 flex-direction: column;
@@ -25,86 +22,16 @@ $primary-color: rgb(44, 196, 210);
                 padding: 0;
                 text-align: left;
                 list-style: none;
-                // animation: 15s linear 0s normal none infinite change;
-                // -webkit-animation: 15s linear 0s normal none infinite change;
-                // -moz-animation: 15s linear 0s normal none infinite change;
-                // -o-animation: 15s linear 0s normal none infinite change; 
-                > li {
-                    > div {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        width: min-content;
-                        height: calc(2 * var(--font-size));
-                        margin: calc(var(--font-size) / 2) 0;
-                        padding: 0 1rem;
-                        background-color: rgba($primary-color, 1);
-                        box-sizing: border-box;
-                        font-size: var(--font-size);
-                        font-weight: 500;
-                        color: rgba(white, 1);
-                    }
+                > li > div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: min-content;
+                    padding: 0 1rem;
+                    box-sizing: border-box;
+                    font-weight: 500;
                 }
             }
         }
     }
 } 
-
-
-// @keyframes change { #{var(--keyframes)} }
-//     $size: var(--size);
-//     $length: to-number('5');
-//     // $length: 100 / to-number(var(--length));
-//     @for $i from 0 through 100 {
-//         @if $i % $length == 0  {
-//             #{$i + '%'} {
-//                 margin-top: calc(#{-3*$i/$length} * var(--size));
-//             } 
-//             @if $i + $length * 0.25 < 100 {
-//                 #{$i + $length * 0.25 + '%'} {
-//                     margin-top: calc(#{-3*$i/$length} * var(--size));
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
-
-// @keyframes change {
-    // 0%   { margin-top: 0; } 
-    // 8%  { margin-top: 0; }
-    // 10%  { margin-top: calc(-3 * var(--size)); }
-    // 18%  { margin-top: calc(-3 * var(--size)); }
-    // 20%  { margin-top: calc(-6 * var(--size)); }
-    // 28%  { margin-top: calc(-6 * var(--size)); }
-    // 30%  { margin-top: calc(-9 * var(--size)); }
-    // 38%  { margin-top: calc(-9 * var(--size)); }
-    // 40%  { margin-top: calc(-12 * var(--size)); }
-    // 48%  { margin-top: calc(-12 * var(--size)); }
-    // 50%  { margin-top: calc(-15 * var(--size)); }
-    // 58%  { margin-top: calc(-15 * var(--size)); }
-    // 60%  { margin-top: calc(-18 * var(--size)); }
-    // 68%  { margin-top: calc(-18 * var(--size)); }
-    // 70%  { margin-top: calc(-21 * var(--size)); }
-    // 78%  { margin-top: calc(-21 * var(--size)); }
-    // 80%  { margin-top: calc(-24 * var(--size)); }
-    // 88%  { margin-top: calc(-24 * var(--size)); }
-    // 90%  { margin-top: calc(-27 * var(--size)); }
-    // 98%  { margin-top: calc(-27 * var(--size)); }
-    // 100% { margin-top: calc(-30 * var(--size)); } 
-// }
-
-// @-webkit-keyframes change {
-//     0%   { margin-top: 0; } 
-//     15%  { margin-top: 0; }
-//     20%  { margin-top: calc(-3 * var(--size)) }
-//     35%  { margin-top: calc(-3 * var(--size)); }
-//     40%  { margin-top: calc(-6 * var(--size)); }
-//     55%  { margin-top: calc(-6 * var(--size)); }
-//     60%  { margin-top: calc(-9 * var(--size)); }
-//     75%  { margin-top: calc(-9 * var(--size)); }
-//     80%  { margin-top: calc(-12 * var(--size)); }
-//     95%  { margin-top: calc(-12 * var(--size)); }
-//     100% { margin-top: calc(-15 * var(--size)); } 
-// }

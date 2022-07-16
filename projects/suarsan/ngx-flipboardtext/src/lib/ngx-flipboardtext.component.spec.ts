@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NgxFlipboardtextComponent } from './ngx-flipboardtext.component';
 
 describe('NgxFlipboardtextComponent', () => {
