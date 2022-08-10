@@ -9,7 +9,7 @@ A full featured and customizable flipboard text component for Angular.
 
 ## Demo
 
-Try full demo  at **[ngx-flipboardtext](www.javiersuarezsanchez.com/projects/ngx-flipboardtext)**
+Try full demo  at **[ngx-flipboardtext](https://javiersuarezsanchez.com/ngx-flipboardtext)**
 
 ## Usage
 
@@ -17,7 +17,7 @@ Try full demo  at **[ngx-flipboardtext](www.javiersuarezsanchez.com/projects/ngx
 
 Install via npm
 
-    npm install @suarsan/flipboardtext
+    npm install @suarsan/ngx-flipboardtext
     
 #### Usage
 
