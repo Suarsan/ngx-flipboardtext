@@ -1,5 +1,4 @@
 :host {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,10 +6,6 @@
     > div.content {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
         > div.visible {
             display: flex;
             flex-direction: row;
@@ -30,6 +25,8 @@
                     padding: 0 1rem;
                     box-sizing: border-box;
                     font-weight: 500;
+                    white-space: nowrap;
+                    word-break: keep-all;
                 }
             }
         }
